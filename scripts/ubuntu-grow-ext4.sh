@@ -19,3 +19,21 @@ echo "====================================="
 
 echo "3. Safely executing live online filesystem expansion..."
 lvextend -l +100%FREE /dev/$VG/$LV --resizefs
+
+#Creating a PV newly with extension 
+#DISK="/dev/sda3"
+#VG="ubuntu-vg"
+#LV="db-lv"
+
+#echo "   Starting Live Storage Expansion..."
+#echo "1. Initializing Physical Volume on $DISK..."
+#pvcreate "$DISK"
+
+#echo "2. Extending Volume Group $VG..."
+#vgextend "$VG" "$DISK"
+
+#echo "3. Safely executing live online filesystem expansion..."
+#lvextend -l +100%FREE /dev/$VG/$LV --resizefs
+
+#echo "✅ Success! Storage expanded with zero downtime."
+#df -h /dev/mapper/${VG}-${LV}
