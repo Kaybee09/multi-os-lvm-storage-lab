@@ -3,7 +3,7 @@
 set -e
 
 if [ "$EUID" -ne 0 ]; then
-  echo "❌ Error: This production script must be run as root." >&2
+  echo " Error: This production script must be run as root." >&2
   exit 1
 fi
 
@@ -35,5 +35,5 @@ lvextend -l +100%FREE /dev/$VG/$LV --resizefs
 #echo "3. Safely executing live online filesystem expansion..."
 #lvextend -l +100%FREE /dev/$VG/$LV --resizefs
 
-#echo "✅ Success! Storage expanded with zero downtime."
+#echo "Success! Storage expanded with zero downtime."
 #df -h /dev/mapper/${VG}-${LV}
