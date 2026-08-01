@@ -1,6 +1,6 @@
 #!/bin/bash
 
-usage=$(lvs --noheadings -o data_percent corp_storage/thinpool | tr -d ' %')
+usage=$(lvs --noheadings -o data_percent corp_storage/thinpools | tr -d ' %')
 
 usage=${usage%.*}
 
