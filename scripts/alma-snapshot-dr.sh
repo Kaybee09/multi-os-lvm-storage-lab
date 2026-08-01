@@ -4,7 +4,7 @@ usage=$(lvs --noheadings -o data_percent corp_storage/thinpool | tr -d ' %')
 
 usage=${usage%.*}
 
-if [ "$usage" -ge 90 ]; then
+if [ "$usage" -ge 70 ]; then
     logger "CRITICAL: Thin Pool usage is ${usage}%"
 elif [ "$usage" -ge 80 ]; then
     logger "WARNING: Thin Pool usage is ${usage}%"
